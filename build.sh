@@ -6,4 +6,6 @@ pip install -r requirements.txt
 
 python manage.py collectstatic --noinput
 python manage.py migrate
-python manage.py createsuperuser --username admin --email admin@test.com --noinput
+
+# パスワード付きでスーパーユーザー作成
+python manage.py createsuperuser --noinput --username admin --email admin@test.com || true
