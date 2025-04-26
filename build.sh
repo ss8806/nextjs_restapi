@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 # settings.py の場所を明示的に設定
-export DJANGO_SETTINGS_MODULE=rest_api.settings # 必要に応じて変更
+export DJANGO_SETTINGS_MODULE=nextjs_restapi.settings
 pip install -r requirements.txt
 python manage.py collectstatic --noinput
 python manage.py migrate
