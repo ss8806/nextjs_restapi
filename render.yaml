@@ -6,11 +6,10 @@ databases:
 
 services:
   - type: web
-    name: api
-    plan: free
+    name: django-rest-api
     env: python
-    buildCommand: ./build.sh
-    startCommand: gunicorn nextjs_restapi.wsgi:application
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn rest_api.wsgi:application
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -22,3 +21,5 @@ services:
         value: "2"
       - key: DJANGO_SUPERUSER_PASSWORD
         generateValue: true
+      - key: DJANGO_SETTINGS_MODULE
+        value: rest_api.settings
