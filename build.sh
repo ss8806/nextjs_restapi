@@ -2,10 +2,10 @@
 # exit on error
 set -o errexit
 
+export DJANGO_SETTINGS_MODULE=src.rest_api.settings
+
 pip install -r requirements.txt
 
 python manage.py collectstatic --noinput
 python manage.py migrate
-
-# パスワード付きでスーパーユーザー作成
-python manage.py createsuperuser --noinput --username admin --email admin@test.com || true
+python manage.py createsuperuser --username admin --email admin@test.com --noinput
