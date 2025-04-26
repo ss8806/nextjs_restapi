@@ -2,7 +2,7 @@
 # exit on error
 set -o errexit
 
-export DJANGO_SETTINGS_MODULE=src.rest_api.settings
+export DJANGO_SETTINGS_MODULE=rest_api.settings
 
 pip install -r requirements.txt
 
