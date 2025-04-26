@@ -8,6 +8,8 @@ echo "=== 現在のディレクトリ ==="
 pwd
 echo "=== ディレクトリ内容 ==="
 ls -l
+echo "=== rest_api内容 ==="
+ls -l rest_api
 
 pip install -r requirements.txt
 
