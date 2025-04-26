@@ -2,12 +2,12 @@
 # exit on error
 set -o errexit
 
+export PYTHONPATH=$(pwd)
+
 echo "=== 現在のディレクトリ ==="
 pwd
 echo "=== ディレクトリ内容 ==="
 ls -l
-
-export PYTHONPATH=$(pwd)
 
 pip install -r requirements.txt
 
